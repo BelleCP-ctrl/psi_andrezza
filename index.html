@@ -38,34 +38,48 @@ blockquote{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-style:it
 .green dl{margin:14px 0 0}
 .green dt{font-weight:600;font-size:.9rem;opacity:.85}
 .green dd{margin:0 0 10px;font-size:1rem}
+
 .btn{display:block;width:100%;text-align:center;text-decoration:none;font:inherit;font-weight:600;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 20px;box-shadow:0 4px 14px rgba(60,70,50,.08);cursor:pointer;transition:transform .2s,box-shadow .2s,filter .2s}
 .btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:var(--shadow)}
 .btn:focus-visible{outline:3px solid var(--green);outline-offset:3px}
 
-/* Estilização destacada para o botão principal do WhatsApp */
-.btn.cta{
-  background:var(--green);
-  color:var(--green-ink);
-  border:2px solid rgba(255, 255, 255, 0.35);
-  font-size:1.1rem;
-  padding:18px 20px;
-  box-shadow:0 8px 20px rgba(91,112,76,.35);
-}
-.btn.cta:hover,.btn.cta:focus-visible{
-  transform:translateY(-2px);
-  box-shadow:0 12px 26px rgba(91,112,76,.45);
-  filter:brightness(1.05);
-}
-.btn.cta small{display:block;font-weight:400;opacity:.9;margin-top:4px;font-size:.88rem}
 
-.btn-content{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
+.btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  line-height: 1.3;
 }
-.wpp-icon{
-  flex-shrink:0;
+.wpp-icon {
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.btn.cta {
+  background: #627A52;
+  color: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  font-size: 1.05rem;
+  padding: 16px 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  margin-top: 8px;
+}
+.btn.cta:hover, .btn.cta:focus-visible {
+  transform: translateY(-2px);
+  background: #6B855A;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+.btn.cta small {
+  display: block;
+  font-weight: 400;
+  opacity: 0.92;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  line-height: 1.3;
 }
 
 .links{display:grid;gap:12px}
@@ -108,12 +122,12 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:34px 0 10px
 
   <section>
     <a class="btn cta" id="wpp" href="https://wa.me/5522992311001?text=Ol%C3%A1%2C%20Andrezza!%20Gostaria%20de%20saber%20mais%20sobre%20o%20atendimento." target="_blank" rel="noopener">
-      <span class="btn-content">
-        <svg class="wpp-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+      <div class="btn-content">
+        <svg class="wpp-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
           <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.94 9.94 0 0 0 1.341 5.011L2 22l5.12-1.334a9.957 9.957 0 0 0 4.892 1.28h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.668-1.039-5.176-2.927-7.063C17.19 2.039 14.68 1.999 12.012 2zm.003 1.67c4.582 0 8.318 3.73 8.319 8.314 0 2.22-.865 4.308-2.438 5.879-1.573 1.572-3.662 2.436-5.88 2.436h-.003c-1.42 0-2.812-.381-4.027-1.102l-.289-.172-2.99.78.797-2.909-.189-.3a8.297 8.297 0 0 1-1.272-4.312c0-4.583 3.737-8.314 8.32-8.314zm-3.6 4.354c-.2-.045-.436.002-.6.113-.197.135-.684.664-.684 1.62 0 .956.697 1.88.793 2.01.097.13 1.347 2.12 3.327 2.946.471.197.84.315 1.127.406.474.15.906.129 1.247.078.38-.057 1.17-.478 1.336-.94.166-.462.166-.858.117-.944-.05-.086-.188-.138-.387-.238-.198-.1-.17-.1-1.17-.59-.1-.049-.174-.075-.248.037-.074.113-.288.363-.353.438-.066.075-.132.086-.33.013s-.838-.309-1.597-.986c-.59-.526-.989-1.175-1.105-1.374-.116-.199-.012-.307.086-.405.089-.089.199-.232.298-.348.099-.116.132-.198.198-.33.066-.132.033-.248-.016-.347-.049-.1-.444-1.07-.609-1.464-.16-.384-.325-.33-.446-.336z"/>
         </svg>
-        Agendar consulta pelo WhatsApp
-      </span>
+        <span>Agendar consulta pelo WhatsApp</span>
+      </div>
       <small>Clique para consultar horários disponíveis e valores.</small>
     </a>
   </section>
